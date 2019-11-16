@@ -12,6 +12,7 @@
                 @endif
                 <div class="card-header">Blog Index</div>
                 <a href="{{route('blog:create')}}" class="btn btn-primary">Create</a>
+                
 
                 <div class="card-body">
                     Display all the blog here
@@ -33,8 +34,9 @@
                                         <td>{{ $blog->title}}</td>
                                         <td>{{ $blog->created_at->diffForHumans()}}</td>
                                         <td>
-                                            <a href="" class="btn btn-primary">Edit</a>
-                                            <a href="" class="btn btn-danger"
+                                            <a href="{{route('blog:edit',$blog)}}" class="btn btn-primary">Edit</a>
+                                            <a href="{{route('blog:show',$blog)}}" class="btn btn-primary">Show</a>
+                                            <a href="{{route('blog:padam',$blog)}}" class="btn btn-danger"
                                                 onclick="return confirm('Are you sure?')">Delete</a>
                                         </td>
                                     </tr>
