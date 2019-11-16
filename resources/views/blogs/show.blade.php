@@ -18,6 +18,11 @@
                             {{ $blog->body }}
                         </div>
                         <div class="form-group">
+                            Written by: 
+                            {{ $blog->user_id ? $blog->user->name : "ENTAH" }}
+                        </div>
+                        
+                        <div class="form-group">
                             <a href="{{ route('blog:index')}}" class="btn btn-link">Back</a>
                         </div>
                     </form>
